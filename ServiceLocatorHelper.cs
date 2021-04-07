@@ -1,6 +1,14 @@
 
 // This will create service locator helper, and must be registered under startup.cs
 
+/*
+    USAGE:
+    ServiceLocatorHelper.Current.GetInstance<ANYCLASSHERE>();
+    
+    REGISTRATION: [ must register at the very bottom of configure services ]
+    ServiceLocatorHelper.SetLocatorProvider(services.BuildServiceProvider());
+*/
+
 public class ServiceLocatorHelper
 {
     private ServiceProvider _currentServiceProvider;
